@@ -15,11 +15,11 @@ const Hook: FC <Props> = ({ initHook }) => {
     useEffect(()=>{
         setCount(initHook);
         const url = "https://dataapi.moc.go.th/products?keyword=มะพร้าว";
-   fetch(url)
-       .then((res) =>res.json())
-       .then((data) => {
-       setData(data);
-        console.log(data);
+        fetch(url)
+            .then((res) =>res.json())
+            .then((data) => {
+            setData(data);
+            console.log(data);
     });
     },[count]);
   
